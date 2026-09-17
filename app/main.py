@@ -9,13 +9,12 @@ def home():
         "message": "Python Login API is running"
     }
     
-    
 @app.get("/database-test")
 def database_test():
     try:
         with engine.connect():
             return{
-                "message": "Database connected successfully"
+                "message": "Database connected successfully with pgAdmin"
             }   
     except Exception as e:
         return{
