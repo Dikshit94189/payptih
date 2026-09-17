@@ -2,10 +2,13 @@ from fastapi import FastAPI
 from app.database.base import Base
 from app.database.database import engine
 from app.models.user import User
+from app.router.user_router import router as user_router
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.include_router(user_router)
 
 @app.get("/")
 def home():
