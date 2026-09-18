@@ -15,3 +15,10 @@ You should see:
 Then:
 
 pip install python-dotenv
+
+
+
+------------------------  RUN the server -------------------------
+venv\Scripts\activate
+
+uvicorn app.main:app --reload
